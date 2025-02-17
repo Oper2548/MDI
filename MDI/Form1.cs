@@ -57,30 +57,34 @@ namespace MDI
 
         private void mnuSell_Click(object sender, EventArgs e)
         {
-            F2 f = new F2();
-            f.MdiParent = this;
-            f.Show();
+            OpenChildForm<F2>();
+            //F2 f = new F2();
+            //f.MdiParent = this;
+            //f.Show();
         }
 
         private void mnuRepotSell_Click(object sender, EventArgs e)
         {
-            F3 f = new F3();
-            f.MdiParent = this;
-            f.Show();
+            OpenChildForm<F3>();
+            //F3 f = new F3();
+            //f.MdiParent = this;
+            //f.Show();
         }
 
         private void mnuManage_Click(object sender, EventArgs e)
         {
-            frmCategories f = new frmCategories();
-            f.MdiParent = this;
-            f.Show();
+            OpenChildForm<frmCategories>();
+            //frmCategories f = new frmCategories();
+            //f.MdiParent = this;
+            //f.Show();
         }
 
         private void mnuManageSell_Click(object sender, EventArgs e)
         {
-            F5 f = new F5();
-            f.MdiParent = this;
-            f.Show();
+            OpenChildForm<F5>();
+            //F5 f = new F5();
+            //f.MdiParent = this;
+            //f.Show();
         }
 
         private void mnuLogout_Click(object sender, EventArgs e)
@@ -100,6 +104,26 @@ namespace MDI
             {
                 child.Close();
             }
+        }
+
+        private void OpenChildForm<T>() where T :Form , new()
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is T)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
+            T newChild = new T
+            {
+                MdiParent = this,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            newChild.Show();
+
         }
     }
 }
