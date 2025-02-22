@@ -1,14 +1,14 @@
-﻿namespace MDI
+﻿namespace WinFormMiniMart
 {
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,165 +23,98 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            mnuLogin = new ToolStripMenuItem();
-            mnuClos = new ToolStripMenuItem();
-            menuStrip2 = new MenuStrip();
-            mnuManage = new ToolStripMenuItem();
-            mnuManageSell = new ToolStripMenuItem();
-            mnuManageEmployee = new ToolStripMenuItem();
-            mnuRepotSellEmployee = new ToolStripMenuItem();
-            mnuLogoutEmployee = new ToolStripMenuItem();
-            menuStrip3 = new MenuStrip();
-            mnuSell = new ToolStripMenuItem();
-            mnuRepotSell = new ToolStripMenuItem();
-            mnuLogout = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
-            menuStrip2.SuspendLayout();
-            menuStrip3.SuspendLayout();
+            dgvEmployees = new DataGridView();
+            button1 = new Button();
+            button2 = new Button();
+            txtSearch = new TextBox();
+            button3 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip1
+            // dgvEmployees
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuLogin, mnuClos });
-            menuStrip1.Location = new Point(0, 56);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
-            menuStrip1.TabIndex = 4;
-            menuStrip1.Text = "menuStrip1";
+            dgvEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEmployees.Location = new Point(12, 160);
+            dgvEmployees.Name = "dgvEmployees";
+            dgvEmployees.RowHeadersWidth = 51;
+            dgvEmployees.Size = new Size(776, 274);
+            dgvEmployees.TabIndex = 0;
+            dgvEmployees.CellDoubleClick += dgvEmployees_CellDoubleClick;
+            dgvEmployees.CellMouseUp += dgvEmployees_CellMouseUp;
             // 
-            // mnuLogin
+            // button1
             // 
-            mnuLogin.Name = "mnuLogin";
-            mnuLogin.Size = new Size(80, 24);
-            mnuLogin.Text = "เข้าสู่ระบบ";
-            mnuLogin.Click += mnuLogin_Click;
+            button1.BackColor = Color.Cyan;
+            button1.Location = new Point(373, 87);
+            button1.Name = "button1";
+            button1.Size = new Size(102, 55);
+            button1.TabIndex = 1;
+            button1.Text = "ล้างการค้นหา";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // mnuClos
+            // button2
             // 
-            mnuClos.Name = "mnuClos";
-            mnuClos.Size = new Size(90, 24);
-            mnuClos.Text = "ปิดโปรแกรม";
-            mnuClos.Click += mnuClos_Click;
+            button2.BackColor = Color.Lime;
+            button2.Location = new Point(242, 87);
+            button2.Name = "button2";
+            button2.Size = new Size(125, 52);
+            button2.TabIndex = 1;
+            button2.Text = "เพิ่มข้อมูล";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // menuStrip2
+            // txtSearch
             // 
-            menuStrip2.ImageScalingSize = new Size(20, 20);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { mnuManage, mnuManageSell, mnuManageEmployee, mnuRepotSellEmployee, mnuLogoutEmployee });
-            menuStrip2.Location = new Point(0, 28);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(800, 28);
-            menuStrip2.TabIndex = 5;
-            menuStrip2.Text = "menuStrip2";
+            txtSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.Location = new Point(36, 26);
+            txtSearch.Multiline = true;
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(733, 55);
+            txtSearch.TabIndex = 2;
+            txtSearch.TextChanged += textBox1_TextChanged;
             // 
-            // mnuManage
+            // button3
             // 
-            mnuManage.Name = "mnuManage";
-            mnuManage.Size = new Size(128, 24);
-            mnuManage.Text = "จัดการข้อมูลสินค้า";
-            mnuManage.Click += mnuManage_Click;
-            // 
-            // mnuManageSell
-            // 
-            mnuManageSell.Name = "mnuManageSell";
-            mnuManageSell.Size = new Size(178, 24);
-            mnuManageSell.Text = "จัดการข้อมูลหมวดหมู่สินค้า";
-            mnuManageSell.Click += mnuManageSell_Click;
-            // 
-            // mnuManageEmployee
-            // 
-            mnuManageEmployee.Name = "mnuManageEmployee";
-            mnuManageEmployee.Size = new Size(145, 24);
-            mnuManageEmployee.Text = "จัดการข้อมูลพนักงาน";
-            // 
-            // mnuRepotSellEmployee
-            // 
-            mnuRepotSellEmployee.Name = "mnuRepotSellEmployee";
-            mnuRepotSellEmployee.Size = new Size(112, 24);
-            mnuRepotSellEmployee.Text = "รายงานการขาย";
-            // 
-            // mnuLogoutEmployee
-            // 
-            mnuLogoutEmployee.AccessibleDescription = "mnuSelllogout";
-            mnuLogoutEmployee.Name = "mnuLogoutEmployee";
-            mnuLogoutEmployee.Size = new Size(101, 24);
-            mnuLogoutEmployee.Text = "ออกจากระบบ";
-            mnuLogoutEmployee.Click += ออกจากระบบToolStripMenuItem_Click;
-            // 
-            // menuStrip3
-            // 
-            menuStrip3.ImageScalingSize = new Size(20, 20);
-            menuStrip3.Items.AddRange(new ToolStripItem[] { mnuSell, mnuRepotSell, mnuLogout });
-            menuStrip3.Location = new Point(0, 0);
-            menuStrip3.Name = "menuStrip3";
-            menuStrip3.Size = new Size(800, 28);
-            menuStrip3.TabIndex = 6;
-            menuStrip3.Text = "menuStrip3";
-            // 
-            // mnuSell
-            // 
-            mnuSell.Name = "mnuSell";
-            mnuSell.Size = new Size(80, 24);
-            mnuSell.Text = "ขายสินค้า";
-            mnuSell.Click += mnuSell_Click;
-            // 
-            // mnuRepotSell
-            // 
-            mnuRepotSell.Name = "mnuRepotSell";
-            mnuRepotSell.Size = new Size(115, 24);
-            mnuRepotSell.Text = "รายงานยอดขาย";
-            mnuRepotSell.Click += mnuRepotSell_Click;
-            // 
-            // mnuLogout
-            // 
-            mnuLogout.Name = "mnuLogout";
-            mnuLogout.Size = new Size(101, 24);
-            mnuLogout.Text = "ออกจากระบบ";
-            mnuLogout.Click += mnuLogout_Click;
+            button3.BackColor = Color.Red;
+            button3.ForeColor = SystemColors.ControlText;
+            button3.Location = new Point(481, 87);
+            button3.Name = "button3";
+            button3.Size = new Size(125, 52);
+            button3.TabIndex = 1;
+            button3.Text = "ลบข้อมูล";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(menuStrip1);
-            Controls.Add(menuStrip2);
-            Controls.Add(menuStrip3);
-            IsMdiContainer = true;
-            MainMenuStrip = menuStrip1;
+            Controls.Add(txtSearch);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(dgvEmployees);
             Name = "Form1";
-            Text = "Form1";
-            FormClosing += Form1_FormClosing;
+            Text = "จัดการพนักงาน";
             Load += Form1_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
-            menuStrip3.ResumeLayout(false);
-            menuStrip3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private MenuStrip menuStrip1;
-        private MenuStrip menuStrip2;
-        private MenuStrip menuStrip3;
-        private ToolStripMenuItem mnuLogin;
-        private ToolStripMenuItem mnuClos;
-        private ToolStripMenuItem mnuManage;
-        private ToolStripMenuItem mnuManageSell;
-        private ToolStripMenuItem mnuManageEmployee;
-        private ToolStripMenuItem mnuRepotSellEmployee;
-        private ToolStripMenuItem mnuSell;
-        private ToolStripMenuItem mnuRepotSell;
-        private ToolStripMenuItem mnuLogoutEmployee;
-        private ToolStripMenuItem mnuLogout;
+
+        private DataGridView dgvEmployees;
+        private Button button1;
+        private Button button2;
+        private TextBox txtSearch;
+        private Button button3;
     }
 }

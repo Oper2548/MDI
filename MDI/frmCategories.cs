@@ -54,7 +54,7 @@ namespace WinFormMiniMart
 
             if (string.IsNullOrEmpty(txtCategoryName.Text))
             {
-                MessageBox.Show("ª×èÍ»ÃÐàÀ·ÊÔ¹¤éÒµéÍ§ÇèÒ§");
+                MessageBox.Show("กรุณาข้อมูลที่ต้องการจะเพิ่มก่อน");
                 return;
             }
 

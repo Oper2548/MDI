@@ -40,7 +40,8 @@
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(172, 131);
+            txtDescription.Font = new Font("Segoe UI", 16.2F);
+            txtDescription.Location = new Point(245, 128);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.Size = new Size(342, 123);
@@ -48,63 +49,74 @@
             // 
             // txtCategoryName
             // 
-            txtCategoryName.Location = new Point(172, 72);
+            txtCategoryName.Font = new Font("Segoe UI", 16.2F);
+            txtCategoryName.Location = new Point(245, 69);
             txtCategoryName.Name = "txtCategoryName";
-            txtCategoryName.Size = new Size(327, 27);
+            txtCategoryName.Size = new Size(327, 43);
             txtCategoryName.TabIndex = 11;
             // 
             // txtCategoryID
             // 
-            txtCategoryID.Location = new Point(172, 26);
+            txtCategoryID.Font = new Font("Segoe UI", 16.2F);
+            txtCategoryID.Location = new Point(245, 23);
             txtCategoryID.Name = "txtCategoryID";
-            txtCategoryID.Size = new Size(153, 27);
+            txtCategoryID.Size = new Size(153, 43);
             txtCategoryID.TabIndex = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(42, 131);
+            label3.Font = new Font("Segoe UI", 16.2F);
+            label3.Location = new Point(108, 128);
             label3.Name = "label3";
-            label3.Size = new Size(72, 20);
+            label3.Size = new Size(141, 38);
             label3.TabIndex = 9;
-            label3.Text = "รายละเอียด";
+            label3.Text = "รายละเอียด:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(42, 72);
+            label2.Font = new Font("Segoe UI", 16.2F);
+            label2.Location = new Point(54, 71);
             label2.Name = "label2";
-            label2.Size = new Size(101, 20);
+            label2.Size = new Size(195, 38);
             label2.TabIndex = 8;
-            label2.Text = "ชื่อประเภทสินค้า";
+            label2.Text = "ชื่อประเภทสินค้า:";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F);
             label1.Location = new Point(42, 33);
             label1.Name = "label1";
-            label1.Size = new Size(107, 20);
+            label1.Size = new Size(207, 38);
             label1.TabIndex = 7;
-            label1.Text = "รหัสประเภทสินค้า";
+            label1.Text = "รหัสประเภทสินค้า:";
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(190, 293);
+            btnSave.BackColor = Color.Lime;
+            btnSave.Font = new Font("Segoe UI", 16.2F);
+            btnSave.ForeColor = SystemColors.ActiveCaptionText;
+            btnSave.Location = new Point(362, 267);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(94, 29);
+            btnSave.Size = new Size(107, 51);
             btnSave.TabIndex = 13;
             btnSave.Text = "บันทึก";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(342, 293);
+            btnCancel.BackColor = Color.Red;
+            btnCancel.Font = new Font("Segoe UI", 16.2F);
+            btnCancel.ForeColor = SystemColors.ButtonHighlight;
+            btnCancel.Location = new Point(475, 267);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
+            btnCancel.Size = new Size(112, 51);
             btnCancel.TabIndex = 14;
             btnCancel.Text = "ยกเลิก";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             // 
             // FrmInsertUpdateCategories
             // 
